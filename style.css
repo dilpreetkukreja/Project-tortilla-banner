@@ -1,0 +1,193 @@
+body{
+    box-sizing: border-box;
+
+}
+.wrapper{
+    width:100vw;
+    height:100vh;
+    display: grid;
+    grid-template-columns: 20vw 20vw 1fr 20vw;
+    grid-template-rows: 20vh 20vh 1fr 40vh 1fr;
+
+}
+img{
+    width: 100%;
+    
+}
+/* Layout */
+.logo{
+    /* display:flex;
+    align-items: center;
+    justify-content: center; */
+    background:white;
+    grid-column:1/3;
+    grid-row:1/4;
+    /* margin-bottom:-70px; */
+    background-image: url(images/logo.png);
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 100% , 0% calc(100% - 6vw)); */
+  
+
+}
+.simple-ingredients-logo{
+    grid-column:4/5;
+    grid-row:1/2;
+}
+
+.main-content{
+    grid-column:1/3;
+    grid-row:3/6;
+}
+.number-of-tortilla{
+    grid-column:3/5;
+    grid-row:5/5;
+    text-align: right;
+    background-color: rgba(162,128,22,0.7);
+    /* background-color: rgba(0,0,0); */
+    color:white;
+    padding: 1rem 2rem 1rem 1rem;
+    font-size: 1.5rem;
+    /* clip-path: polygon(0% 5vw, 100% 0%, 100% 100% , 0% 100%); */
+    /* mix-blend-mode: multiply; */
+}
+.number-of-tortilla div:nth-child(1), div:nth-child(3) span{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.number-of-tortilla div:nth-child(2){
+    display: inline-block;
+  
+}
+.number-of-tortilla div:nth-child(2)::after{
+    content:'';
+    display:block;
+    border-bottom: 2px solid white;
+
+}
+
+
+.number-of-tortilla div:nth-child(3)::before{
+    display:inline-block;
+    content:'';
+    width:1em;
+    height:0.8em;;
+    background-image:url(images/Maple_Leaf.svg);
+    background-size: 0.8em;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.taco-img{
+    background-image: url(images/taco.jpg);
+    background-position: center;
+    background-size:cover;
+    grid-column:3/5;
+    grid-row:1/6;
+    z-index:-1;
+    
+}
+/* backgrounds */
+.div1{
+    width:100%;
+    height:calc(100% - 5vw);
+    /* background: green; */
+    position: relative;
+    /* clip-path: polygon(0% 0%, 100% 5vw, 100% 100% , 0% 100%); */
+}
+.background1{
+    width:100%;
+    height: 100%;
+    clip-path: polygon(0% 5vw, 100% 0%, 100% 100% , 0% 100%);
+    position: absolute;
+    top:0;
+    padding-top:5vw;
+    background-color:rgba(162,128,22,1);
+}
+.background2{
+    width:100%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 100% 5vw, 100% 100% , 0% 100%);
+    position: absolute;
+    top:0;
+    background-color:rgba(253,184,19,0.9);
+    padding-top:5vw;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+/* main content */
+.flavours{
+
+    border: 2px solid red;
+    display: inline-block;
+    padding: 0.6em;
+    border-radius: 1em 0 1em 0;
+}
+.ingredients{
+    text-transform: initial;  
+    margin-top: 1rem;
+    width: 10rem;
+    /* border: 1px solid black; */
+    margin:auto;
+}
+.ingredients div:first-child{
+    font-size: 1rem;
+}
+.ingredients div:last-child{
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* white-space: nowrap; */
+}
+/* lines across */
+.ingredients div:first-child{
+    /* background: lightblue; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 30px;
+
+}
+.ingredients div:first-child::before{
+    content:'';
+    border-bottom: 2px solid black;
+    flex:1;
+    margin-right: 1rem; 
+    /* height: 1rem; */
+}
+.ingredients div:first-child::after{
+    content:'';
+    border-bottom: 2px solid black;
+    flex:1;
+    margin-left: 1rem;
+}
+/* simple ingredient logo */
+.simple-ingredients-logo{
+    clip-path: circle();
+    background-image: url(images/ingredients.jpg);
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 414px){
+    .wrapper{
+        grid-template-columns: 30vw 30vw 1fr 20vw;
+        /* grid-template-rows: 20vh 20vh 1fr 40vh 1fr; */
+    }
+    .background2 h1{
+        font-size: 1.8rem;
+    }
+    .ingredients div:nth-child(2){
+        font-size:1.2rem;
+    }
+    .number-of-tortilla{
+        font-size:1rem;
+        /* text-align: left; */
+    }
+    .number-of-tortilla div:nth-child(3){
+        white-space: nowrap;
+        font-size: 0.6rem;
+    }
+}
