@@ -170,6 +170,10 @@ img{
 /* simple ingredient logo */
 .simple-ingredients-logo{
     clip-path: circle();
+    -webkit-clip-path: circle();
+    -moz-clip-path: circle();
+    -o-clip-path: circle();
+    -ms-clip-path: circle();
     background-image: url(images/ingredients.jpg);
     background-position: center;
     background-size:contain;
