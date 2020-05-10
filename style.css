@@ -7,7 +7,7 @@ body{
     height:100vh;
     display: grid;
     grid-template-columns: 20vw 20vw 1fr 20vw;
-    grid-template-rows: 20vh 20vh 40vh 1fr;
+    grid-template-rows: 20vh 20vh 40vh auto;
 
 }
 img{
@@ -47,7 +47,7 @@ img{
     background-color: rgba(162,128,22,0.7);
     /* background-color: rgba(0,0,0); */
     color:white;
-    padding: 1rem 2rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     font-size: 1.5rem;
     /* clip-path: polygon(0% 5vw, 100% 0%, 100% 100% , 0% 100%); */
     /* mix-blend-mode: multiply; */
@@ -84,7 +84,7 @@ img{
     background-position: center;
     background-size:cover;
     grid-column:3/5;
-    grid-row:1/6;
+    grid-row:1/5;
     z-index:-1;
     
 }
@@ -124,6 +124,7 @@ img{
     display: inline-block;
     padding: 0.6em;
     border-radius: 1em 0 1em 0;
+    margin-bottom: 2.5rem;
 }
 .ingredients{
     text-transform: initial;  
@@ -174,7 +175,7 @@ img{
 @media screen and (max-width: 414px){
     .wrapper{
         grid-template-columns: 30vw 30vw 1fr 20vw;
-        /* grid-template-rows: 20vh 20vh 1fr 40vh 1fr; */
+        /* grid-template-rows: 20vh 20vh 40vh 1fr; */
     }
     .background2 h1{
         font-size: 1.8rem;
