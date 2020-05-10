@@ -7,7 +7,7 @@ body{
     height:100vh;
     display: grid;
     grid-template-columns: 20vw 20vw 1fr 20vw;
-    grid-template-rows: 20vh 20vh 40vh auto;
+    grid-template-rows: 20vh 20vh 50vh auto;
 
 }
 img{
@@ -96,6 +96,7 @@ img{
     position: relative;
     /* clip-path: polygon(0% 0%, 100% 5vw, 100% 100% , 0% 100%); */
 }
+
 .background1{
     width:100%;
     height: 100%;
@@ -118,6 +119,9 @@ img{
     text-transform: uppercase;
 }
 /* main content */
+.background2 h1{
+    margin-top:3rem;
+}
 .flavours{
 
     border: 2px solid red;
@@ -179,6 +183,7 @@ img{
     }
     .background2 h1{
         font-size: 1.8rem;
+    
     }
     .ingredients div:nth-child(2){
         font-size:1.2rem;
